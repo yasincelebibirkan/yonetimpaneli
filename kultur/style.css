@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Gideon+Roman&family=Herr+Von+Muellerhoff&family=Oxygen:wght@300&family=Poppins:wght@400;500;600;700&family=Teko:wght@300&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'poppins',sans-serif ;
+	scroll-behavior: smooth;
+}
+
+body
+{
+	background: #fff;
+	min-height: 100vh;
+	overflow: hidden;
+
+	margin: 0;
+    padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+header
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+	z-index: 1000;
+}
+
+section
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	color: #f5f5f5;
+	/* font-size: 18vw; */
+	/* font-weight: 700;  */
+
+	/* NOT: 
+	"Duyurular" kısmı için font-size kısmını yoruma aldım. */
+}
+
+
+
+
+/* DUYURULAR KISMI */
+
+section#Duyurular
+{
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.gebze.bel.tr/slider/20200608164858.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+section#Duyurular .leftBox
+{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+section#Duyurular .leftBox .content
+{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 40px;
+    transition: .5s;
+}
+
+section#Duyurular .leftBox .content:hover
+{
+    /* background: #231955; */
+    background: #12344e;
+}
+
+section#Duyurular .leftBox .content h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+section#Duyurular .leftBox .content p
+{
+    margin: 10px;
+    padding: 0;
+}
+
+section#Duyurular .events
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    float: right;
+    box-sizing: border-box;
+}
+
+section#Duyurular .events ul
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+section#Duyurular .events ul li
+{
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 215px;
+    
+    margin: 15px 0; 
+}
+
+section#Duyurular .events ul li .time
+{
+    position: relative;
+    padding: 20px;
+    background: #4c4646;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: .5s;
+
+}
+
+section#Duyurular .events ul li:hover .time
+{
+    /* background: #231955 ; */
+    background: #12344e;
+    
+    
+}
+
+section#Duyurular .events ul li .time h2
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 45px;
+    line-height:30px ;
+}
+
+section#Duyurular .events ul li .time h2 span
+{
+    font-size: 30px;
+}
+
+section#Duyurular .events ul li .details
+{
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+section#Duyurular .events ul li .details h3
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+	color: black;
+}
+
+section#Duyurular .events ul li .details p
+{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 12.46px;
+	color: black;
+}
+
+section#Duyurular .events ul li .details a
+{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid #262626;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: .5s;
+    float: right; 
+}
+
+section#Duyurular .events ul li .details a:hover
+{
+    background: #12344e; 
+    color: #fff;
+    /* border-color: #231955; */
+    border-color: #12344e;
+}
+
+
+
+/* İLETİŞİM KISMI */
+
+section#İletisim
+{
+	position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+
+}
+
+section#İletisim::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom:0;
+    z-index: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);    
+    background: rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(10px);
+
+    /* Çizgiden sonra ikinci kısmın - alt tarafın ayarlaması. (z-index=10; dediğimiz için section before kısmında bulunuyor)  */
+}
+
+section#İletisim .color
+{
+    position: absolute; 
+    filter:blur(370px); 
+
+    /* nth-child'daki 3 rengi (pembe,sarı-mavi)  "filter:blur(1)" ile 3 rengi birbirine karıştırdık */
+}
+
+section#İletisim .color:nth-child(1)
+{
+    top: -350px;
+    /* background: #ff359b; */
+    /* background: #12344e; */
+    background: #12344e;
+    width: 600px;
+    height: 600px;
+}
+section#İletisim .color:nth-child(2)
+{
+    top: -150px;
+    left: 100px;
+    /* background: #fffd87; */
+    background: #12344e;
+
+    width: 500px;
+    height: 500px;
+}
+section#İletisim .color:nth-child(3)
+{
+    top: -50px;
+    right: 0px;
+    background: #12344e; 
+   
+    width: 300px;
+    height: 300px;
+}
+
+ul#İletisim
+{
+    position: relative;
+    display: flex;
+}
+
+ul#İletisim li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px;
+}
+
+ul#İletisim li a
+{
+    position: relative;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.4em;
+    border: 3 px solid rgba(255, 255, 255, 0.4);
+    border-right: 5px solid rgba(255, 255, 255, 0.2); 
+    border-left: 5px solid rgba(156, 33, 33, 0.2); 
+    border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    
+    backdrop-filter: blur(4px);
+    z-index: 11;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    overflow: hidden; 
+    transition: top 0.5s, z-index 0.5s, transform 0.5s;
+    transition-delay: 0.5s, 0s, 0s;
+
+}
+
+
+ul#İletisim li a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skew(45deg) translateX(150px);
+    transition: 0.5s;
+
+}
+
+ul#İletisim li a:hover
+{
+    
+    transform: skew(45deg) translateX(-150px); 
+    transition-delay: 0s, 0.5s, 0.5s;
+    top:-50px;
+    transform: translateY(50px); 
+
+}
+
+.logo
+{
+	height:60px;
+	line-height: 60px;
+	color: #12344e;
+	font-weight:700;
+	font-size: 2em;
+	text-decoration: none;
+	cursor: pointer;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+#toggle
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	background: #12344e;
+	cursor: pointer;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	transition: 0.2s;
+}
+
+#toggle::before
+{
+	content: '';
+	position: absolute;
+	width: 28px;
+	height: 2px;
+	background: #fff;
+	transform: translateY(-5px);
+	transition: 0.2s;
+}
+
+#toggle::after
+{
+	content: '';
+	position: absolute;
+	width: 28px;
+	height: 2px;
+	background: #fff;
+	transform: translateY(5px);
+	transition: 0.2s;
+}
+
+#toggle.active::before
+{
+	transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after
+{
+	transform: translateY(0px) rotate(-45deg);
+}
+
+#toggle.active
+{
+	background: #890F0D;
+}
+
+#navbar
+{
+	position: relative;
+	height: 60px;
+	right: 60px;
+	background: #fff;
+	transition: 0.5s;
+	width: 0px;
+	overflow: hidden;
+}
+
+#navbar.active{
+	width: 1000px;
+}
+
+#navbar ul
+{
+	position: relative;
+	display: flex;
+	flex-direction:row ;
+}
+#navbar ul li
+{
+	list-style: none;
+}
+
+#navbar ul li a
+{
+	color: #12345e;
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 0 15px;
+	letter-spacing: 2px;
+}
+
+#navbar ul li a:hover
+{
+	color: #fff;
+	background: #B2C8DF;
+}
+
+
+
+
+
+
+
+
+
+
+/*Now make it responsive*/
+
+@media (max-width: 991px){
+	#navbar
+	{
+		position: fixed;
+		bottom: -100%;
+		right: 0;
+		width: 100%;
+		transition: 0.5s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	#navbar.active
+	{
+		height: calc(100vh - 60px);
+		bottom: 0;
+		width: 100%;
+	}
+	#navbar ul{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
